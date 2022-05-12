@@ -44,7 +44,8 @@ const cardslist = [
 ]
 
 const gridDisplay = document.querySelector("#grid");
-const cardchoice = []
+let cardchoice = []
+let cardchoiceId = []
 
 
  cardslist.sort(() => 0.5 - Math.random());
@@ -63,10 +64,12 @@ function createGrid() {
     createGrid();
 
  function flipCard() { 
-     const cardid = this.getAttribute('data-id');
-     cardchoice.push(cardslist[cardid].name)
+     const cards = this.getAttribute('data-id');
+     cardchoice.push(cardslist[cards].name)
+     cardchoiceId.push(cards)
      console.log(cardchoice)
-     this.setAttribute("src", cardslist[cardid].img);
+     console.log(cardchoiceId)
+     this.setAttribute("src", cardslist[cards].img);
      if (cardchoice.length === 2) {
          setTimeout(checkCards, 1000);
      }
@@ -74,9 +77,18 @@ function createGrid() {
  }   
 
  function checkCards() {
+     const cards = document.querySelectorAll("img");
      console.log("checando")
      if ( cardchoice[0] == cardchoice[1]){
             alert("You found a match!");
-            
+            cards[cardchoiceId[0]].removeEventListener("click", flipCard)
+            cards[cardchoiceId[1]].removeEventListener("click", flipCard)    
      }
-    }
+       else {
+        cards[cardchoiceId[0]].setAttribute("src", "img/blank.png")
+        cards[cardchoiceId[1]].setAttribute("src", "img/blank.png")
+      
+ }
+       cardchoice = []
+       cardchoiceId = []
+}
