@@ -46,6 +46,7 @@ const cardslist = [
 const gridDisplay = document.querySelector("#grid");
 let cardchoice = []
 let cardchoiceId = []
+let cardget = []
 
 
  cardslist.sort(() => 0.5 - Math.random());
@@ -80,9 +81,8 @@ function createGrid() {
      const cards = document.querySelectorAll("img");
      console.log("checando")
      if ( cardchoice[0] == cardchoice[1]){
-            alert("You found a match!");
-            cards[cardchoiceId[0]].removeEventListener("click", flipCard)
-            cards[cardchoiceId[1]].removeEventListener("click", flipCard)    
+            console.log("acertou")
+            cardget.push(cardchoice)    
      }
        else {
         cards[cardchoiceId[0]].setAttribute("src", "img/blank.png")
@@ -91,4 +91,8 @@ function createGrid() {
  }
        cardchoice = []
        cardchoiceId = []
+
+  if (cardget.length == cardslist.length/2) {
+      document.getElementById("result").innerHTML = "Parabens voce ganhou!!!!";
+  }     
 }
