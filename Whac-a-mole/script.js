@@ -6,6 +6,9 @@ const score = document.querySelectorAll('#score')
 
 let result = 0
 let Hereposition
+let tempoAtual =10
+
+
 function randomQuadrado(){
     quadrados.forEach( quadrado => {
         quadrado.classList.remove('duck')
@@ -32,12 +35,23 @@ quadrados.forEach( quadrado => {
 })
 })
 function moveDuck(){
-
     let timer = null
     timer = setInterval(randomQuadrado,1000)
 
 }
-    
 moveDuck()
 
+
+function contador(){
+    tempoAtual-- 
+    time[0].innerHTML = tempoAtual
+    if(tempoAtual == 0){
+        clearInterval(time)
+        clearInterval(contador)
+        clearInterval(tempoAtual)
+        alert('Fim de Jogo')
+    }
+}
+
+let ContadorId = setInterval(contador, 1000)
     
