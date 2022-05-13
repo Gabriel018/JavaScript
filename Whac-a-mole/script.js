@@ -7,6 +7,7 @@ const score = document.querySelectorAll('#score')
 let result = 0
 let Hereposition
 let tempoAtual =10
+let timer = null
 
 
 function randomQuadrado(){
@@ -46,8 +47,8 @@ function contador(){
     tempoAtual-- 
     time[0].innerHTML = tempoAtual
     if(tempoAtual == 0){
-        clearInterval(time)
-        clearInterval(contador)
+        clearInterval(timer)
+        clearInterval(ContadorId)
         clearInterval(tempoAtual)
         alert('Fim de Jogo')
     }
