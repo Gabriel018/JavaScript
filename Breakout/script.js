@@ -10,9 +10,6 @@ class Block {
         this.bottomRight = [x + blockWidth, y]
         this.topleft= [x , y + blockHight]
         this.topRight = [x + blockWidth, y + blockHight]
-        
-        
-
     }
 
 }
@@ -28,7 +25,7 @@ function addBlocks(){
         const block = document.createElement('div')
         block.classList.add('block')
         block.style.left = blocks[i].bottomLeft[0] + 'px'
-        block.style.bottom = blocks[i.bottomRight[1]] + 'px'
+        block.style.bottom = blocks[i].bottomRight[1] + 'px'
         grid.appendChild(block)
     }
 
