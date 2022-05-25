@@ -3,6 +3,9 @@ const block = document.createElement('div')
 const blockWidth = 100
 const blockHight = 20
 
+const StartPosition = [270,10]
+let  Position = StartPosition
+
 
 class Block {
     constructor(x,y){
@@ -15,7 +18,17 @@ class Block {
 }
 
 const blocks = [
-    new Block(20,280)
+    new Block(10,270),
+    new Block(120,270),
+    new Block(240,270),
+    new Block(350,270),
+    new Block(460,270),
+    new Block(10,240),
+    new Block(120,240),
+    new Block(240,240),
+    new Block(350,240),
+    new Block(460,240),
+    
 ]
  
 function addBlocks(){
@@ -31,3 +44,9 @@ function addBlocks(){
 
 }
 addBlocks()
+
+const  user = document.createElement('div')
+user.classList.add('user')
+user.style.left = StartPosition[0] + 'px'
+user.style.bottom = StartPosition[1] + 'px'
+grid.appendChild(user)
