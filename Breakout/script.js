@@ -50,3 +50,20 @@ user.classList.add('user')
 user.style.left = StartPosition[0] + 'px'
 user.style.bottom = StartPosition[1] + 'px'
 grid.appendChild(user)
+
+
+function Draw(){
+    user.style.left = StartPosition[0] + 'px'
+    user.style.bottom = StartPosition[1] + 'px'
+}
+
+function Mover(e){
+    switch(e.key){
+        case 'ArrowLeft':
+            StartPosition[0] -= 10
+            Draw()
+            break;
+    }
+}
+
+document.addEventListener('keydown',Mover)
