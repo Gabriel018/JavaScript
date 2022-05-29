@@ -57,7 +57,7 @@ function Draw(){
     user.style.bottom = StartPosition[1] + 'px'
 }
 
-function Mover(e){
+function MoverL(e){
     switch(e.key){
         case 'ArrowLeft':
             StartPosition[0] -= 10
@@ -66,4 +66,17 @@ function Mover(e){
     }
 }
 
-document.addEventListener('keydown',Mover)
+function MoverR(e){
+    switch(e.key){
+        case 'ArrowRight':
+            StartPosition[0] += 10
+            Draw()
+            break;
+    }
+}
+
+
+
+
+document.addEventListener('keydown',MoverL)
+document.addEventListener('keydown',MoverR)
