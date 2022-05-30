@@ -2,12 +2,18 @@ const grid = document.querySelector('.grid')
 const block = document.createElement('div')
 const blockWidth = 100
 const blockHight = 20
-const bord = 500
+const ballDiameter = 20
+
+let Xdirection  =   6
+
+const bordWidth = 500
+const bordHight = 600
 
 const StartPosition = [270,10]
 let  Position = StartPosition
 
 const BallStart = [310,30]
+let BallPosition = BallStart
 
 
 class Block {
@@ -61,6 +67,13 @@ function Draw(){
     user.style.bottom = StartPosition[1] + 'px'
 }
 
+
+function BallDraw() {
+    ball.style.left = BallStart[0] + 'px'
+    ball.style.bottom = BallStart[1] + 'px'
+}
+
+
 function Mover(e){
     switch(e.key){
         case 'ArrowLeft':
@@ -68,7 +81,7 @@ function Mover(e){
             Draw()
             break;
         case 'ArrowRight':
-            if (StartPosition[0] < bord){
+            if (StartPosition[0] < bordHight ){
                 StartPosition[0] += 10
                 Draw()
             }
@@ -81,6 +94,28 @@ document.addEventListener('keydown',Mover)
 
 const ball = document.createElement('div')
 ball. classList.add('ball')
-ball.style.left = BallStart[0] + 'px'
-ball.style.bottom = BallStart[1] + 'px'
 grid.appendChild(ball)
+
+
+function MoveBall () {
+    BallPosition[0] += Xdirection
+    BallDraw()
+    CheckColision()
+
+}
+
+setInterval(MoveBall,100)
+
+function CheckColision () {
+    if ( BallPosition[0] >= (bordHight - ballDiameter) ){
+       ChanceDirection()
+    }
+
+}
+
+
+function ChanceDirection (){
+    if ( Xdirection == 6 ){
+         Xdirection = -6
+ } 
+}
