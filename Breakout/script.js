@@ -111,6 +111,9 @@ function CheckColision () {
        ChanceDirection()
     }
 
+    if ( BallPosition[0] <= 0 ){
+        ChanceDirection()
+    }
 }
 
 
@@ -118,4 +121,7 @@ function ChanceDirection (){
     if ( Xdirection == 6 ){
          Xdirection = -6
  } 
+    else {
+        Xdirection = 6
+    }
 }
