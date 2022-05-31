@@ -4,9 +4,10 @@ const blockWidth = 100
 const blockHight = 20
 const ballDiameter = 20
 
-let Xdirection  =   6
+let Xdirection = 6
+let Ydirection = 6
 
-const bordWidth = 500
+const bordWidth = 300
 const bordHight = 600
 
 const StartPosition = [270,10]
@@ -15,6 +16,7 @@ let  Position = StartPosition
 const BallStart = [310,30]
 let BallPosition = BallStart
 
+timer =  setInterval(MoveBall,100)
 
 class Block {
     constructor(x,y){
@@ -60,13 +62,10 @@ user.style.left = StartPosition[0] + 'px'
 user.style.bottom = StartPosition[1] + 'px'
 grid.appendChild(user)
 
-
-
 function Draw(){
     user.style.left = StartPosition[0] + 'px'
     user.style.bottom = StartPosition[1] + 'px'
 }
-
 
 function BallDraw() {
     ball.style.left = BallStart[0] + 'px'
@@ -98,24 +97,52 @@ grid.appendChild(ball)
 
 
 function MoveBall () {
-    BallPosition[0] += Xdirection
+    BallPosition[1] += Xdirection
     BallDraw()
     CheckColision()
 
 }
 
-setInterval(MoveBall,100)
+timer =  setInterval(MoveBall,100)
 
 function CheckColision () {
-    if ( BallPosition[0] >= (bordHight - ballDiameter) ){
+    for (let i = 0; i < blocks.length; i++)
+    {
+       if (BallPosition[0] > StartPosition[0] && BallPosition[0] < StartPosition[0] + blockWidth && 
+           BallPosition[1] > StartPosition[1] && BallPosition[1] < StartPosition[1] + blockHight){
+
+           ChanceDirection()
+           console.log('colision')
+       }
+
+        if (BallPosition[0] >= blocks[i].bottomLeft[0] && BallPosition[0] <= blocks[i].bottomRight[0] && BallPosition[1] >= blocks[i].bottomLeft[1] && BallPosition[1] <= blocks[i].topRight[1])
+        {
+            Xdirection = -Xdirection
+            blocks.splice(i,1)
+            grid.removeChild(grid.childNodes[i])
+        }
+    }
+        
+    if ( BallPosition[0] >= (bordHight - ballDiameter)  ||
+       ( BallPosition[1] >= (bordWidth - ballDiameter))) 
+       {
        ChanceDirection()
     }
 
     if ( BallPosition[0] <= 0 ){
         ChanceDirection()
     }
-}
 
+    if ( BallPosition[1] <= 0 ){
+        ChanceDirection()
+    }
+
+    if (BallPosition[1] <=0 ){
+
+        clearInterval(timer)
+
+    }
+}
 
 function ChanceDirection (){
     if ( Xdirection == 6 ){
@@ -124,4 +151,12 @@ function ChanceDirection (){
     else {
         Xdirection = 6
     }
+
+    if ( Ydirection == 6){
+        Ydirection = -6
+} 
+   else {
+       Ydirection = 6
+   }
+
 }
