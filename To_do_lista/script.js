@@ -14,7 +14,7 @@ function Create_List(){
     
     li.appendChild(document.createTextNode(user.value));
     ul.appendChild(li);
-    input.value = '';
+    user.value = '';
 
     let  btn = document.createElement('button');
     btn.appendChild(document.createTextNode('X'));
@@ -22,7 +22,8 @@ function Create_List(){
     btn.addEventListener('click', DeleteList);
     
     function DeleteList(){
-        this.parentElement.remove();
+        li.classList.add('delete');
+        console.log('click');
         }
 }
 
@@ -31,7 +32,7 @@ AddButton.addEventListener('click',addListClick);
 function addListClick(){
     if(Inputlength() > 0){
         Create_List();
-        console.log('click');
+        
     }
 
 }
