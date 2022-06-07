@@ -13,16 +13,24 @@
     </header>
     <section>
         
-        <div id="conteudo">
-        <h3>Idade</h3>
-        
+        <div>
+            <p>Ano de Nascimento:<input type="number" name="ano" id="ano" min="1900" max="2022" required></p>
+           <p>Sexo:
+               <input type="radio" name="sex" id="mas" required >
+               <label> Masculino</label>
+               <input type="radio" name="sex" id="fem" required >
+               <label>Feminino</label>
+           </p>
+           <input type="button" value="verificar" onclick="verificar()">
         </div>
         
-        <div></div>
+        <div id="res"></div>
       
     </section>
     <footer>
-        <p>&copy; Copyright - Identificar de Idade</p>
+        <p>&copy; Copyright - Identificador de Idade</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
