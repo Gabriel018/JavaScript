@@ -6,14 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    #area{
+        background-color: black;
+        width: 100px;
+        height: 100px;
+    }
+</style>
 <body>
    <h1>Mercado Popular</h1>
-   <p>No mercado popular,queremos tudo o que e seu..</p>
-
+   <p id="desc">No mercado popular,queremos tudo o que e seu..</p>
+   <div id="area" onclick="clickar()" onmouseenter="entrou()" onmouseout="saiu()"></div>
 
     <Script>
-        var desc = document.getElementsByTagName('p')[0]
-        window.alert(desc.innerHTML)
+        var descri = document.getElementById('desc')
+        descri.innerText = "Hora de vender!!!"
+        
+        function clicar(){
+            var a = document.getElementById('area')
+            
+        }
+
+        function entrou(){
+          var a = document.getElementById('area')
+          a.style.background = 'red'
+        }
+
+        function saiu(){
+            var a = document.getElementById('area')
+            a.style.background = 'black'
+        }
     </Script>
     
 </body>
