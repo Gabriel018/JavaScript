@@ -1,3 +1,5 @@
+var calen = document.getElementById('calen')
+
 var agora = new Date()
 var DiaSem = agora.getDay()
 
@@ -8,7 +10,7 @@ switch(DiaSem){
         console.log("Domingo")
         break
     case 1:
-        console.log("Segunda")
+        calen.innerHTML = "Hoje e Segunda feira"
         break
     case 2:
         console.log("Terça")
@@ -27,4 +29,5 @@ switch(DiaSem){
         break      
 
 }
+
 
