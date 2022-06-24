@@ -13,19 +13,19 @@ switch(DiaSem){
         calen.innerHTML = "Hoje e Segunda feira"
         break
     case 2:
-        console.log("Terça")
+        calen.innerHTML = "Hoje e Segunda terça"
         break
     case 3:
-        console.log("Quarta")
+        calen.innerHTML = "Hoje e quarta feira"
         break
     case 4:
-        console.log("Quinta")
+        calen.innerHTML = "Hoje e Quinta feira"
         break
     case 5:
-        console.log("Sexta")
+        calen.innerHTML = "Hoje e Sexta feira"
         break
     case 6:
-        console.log("Sabado")
+        calen.innerHTML = "Sabado"
         break      
 
 }
