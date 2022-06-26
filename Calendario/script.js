@@ -1,13 +1,20 @@
 var calen = document.getElementById('calen')
+var Hora = document.getElementById('Hora')
+
+
 
 var agora = new Date()
 var DiaSem = agora.getDay()
 
+var HoraAtual = agora.getHours()
+var MinAtual = agora.getMinutes()
+
+Hora.innerHTML =   ` Horas  ${HoraAtual} : ${MinAtual} `
 
 switch(DiaSem){
 
     case 0:
-        console.log("Domingo")
+        calen.innerHTML = 'Hoje e Domingo'
         break
     case 1:
         calen.innerHTML = "Hoje e Segunda feira"
@@ -27,7 +34,7 @@ switch(DiaSem){
     case 6:
         calen.innerHTML = "Sabado"
         break      
-
+    
 }
 
 
