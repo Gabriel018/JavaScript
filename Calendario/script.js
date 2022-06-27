@@ -1,7 +1,7 @@
 var calen = document.getElementById('calen')
 var Hora = document.getElementById('Hora')
 
-
+var msg = document.getElementById('msg')
 
 var agora = new Date()
 var DiaSem = agora.getDay()
@@ -9,7 +9,12 @@ var DiaSem = agora.getDay()
 var HoraAtual = agora.getHours()
 var MinAtual = agora.getMinutes()
 
-Hora.innerHTML =   ` Horas  ${HoraAtual} : ${MinAtual} `
+Hora.innerHTML =   ` Agora e: ${HoraAtual} : ${MinAtual} `
+
+if( HoraAtual >= 18) {
+    msg.innerHTML = 'Boa Noite'
+}
+
 
 switch(DiaSem){
 
