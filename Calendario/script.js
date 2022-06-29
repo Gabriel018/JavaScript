@@ -1,6 +1,8 @@
 var calen = document.getElementById('calen')
 var Hora = document.getElementById('Hora')
 
+var nome = document.getElementById('nome')
+
 var msg = document.getElementById('msg')
 
 var agora = new Date()
@@ -25,7 +27,7 @@ switch(DiaSem){
         calen.innerHTML = "Hoje e Segunda feira"
         break
     case 2:
-        calen.innerHTML = "Hoje e Segunda terça"
+        calen.innerHTML = "Hoje e  Terça feira"
         break
     case 3:
         calen.innerHTML = "Hoje e quarta feira"
