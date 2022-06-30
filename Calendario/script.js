@@ -1,7 +1,7 @@
 var calen = document.getElementById('calen')
 var Hora = document.getElementById('Hora')
-
-var nome = document.getElementById('nome')
+var Mostrar_name = document.getElementById('Mostrar_Nome')
+var nomedigitado = document.getElementById('nome')
 
 var msg = document.getElementById('msg')
 
@@ -11,11 +11,22 @@ var DiaSem = agora.getDay()
 var HoraAtual = agora.getHours()
 var MinAtual = agora.getMinutes()
 
+
+
+
 Hora.innerHTML =   ` Agora e: ${HoraAtual} : ${MinAtual} `
+
+
+function NomeUser(){
+
+  Mostrar_name.innerHTML = `Bem vindo  ${nomedigitado.value} ` 
+}
+
 
 if( HoraAtual >= 18) {
     msg.innerHTML = 'Boa Noite'
 }
+
 
 
 switch(DiaSem){
@@ -43,5 +54,3 @@ switch(DiaSem){
         break      
     
 }
-
-
