@@ -11,23 +11,15 @@ var DiaSem = agora.getDay()
 var HoraAtual = agora.getHours()
 var MinAtual = agora.getMinutes()
 
-
-
-
-Hora.innerHTML =   ` Agora e: ${HoraAtual} : ${MinAtual} `
-
-
 function NomeUser(){
 
-  Mostrar_name.innerHTML = `Bem vindo  ${nomedigitado.value} ` 
-}
 
-
-if( HoraAtual >= 18) {
+  Hora.innerHTML =   ` Agora e: ${HoraAtual} : ${MinAtual} `
+  if( HoraAtual >= 18) {
     msg.innerHTML = 'Boa Noite'
+
+    Mostrar_name.innerHTML = `Bem vindo ${nomedigitado.value} ` 
 }
-
-
 
 switch(DiaSem){
 
@@ -54,3 +46,7 @@ switch(DiaSem){
         break      
     
 }
+
+}
+
+
