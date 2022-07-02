@@ -42,7 +42,7 @@ switch(DiaSem){
         calen.innerHTML = "Hoje e Sexta feira"
         break
     case 6:
-        calen.innerHTML = "Sabado"
+        calen.innerHTML = " Hoje e Sabado"
         break      
     
 }
