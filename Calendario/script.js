@@ -6,8 +6,13 @@ var Dia = document.getElementById('dia')
 
 var msg = document.getElementById('msg')
 
+
+var Meses = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho",
+"Agosto","Setembro","Outubro","Novembro","Dezembro"]
+
 var agora = new Date()
-var DiaSem = 
+var DiaSem = Meses[agora.getMonth()]
+
 
 
 var MostrarDia = agora.getDate()
@@ -24,10 +29,8 @@ function NomeUser(){
   if( HoraAtual >= 18) {
     msg.innerHTML = 'Boa Noite'
 
- 
-
+    Dia.innerHTML = `Estamos em, ${DiaSem}`
     Mostrar_name.innerHTML = `Bem vindo ${nomedigitado.value} ` 
-
 
 }
 
