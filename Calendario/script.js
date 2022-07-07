@@ -2,14 +2,20 @@ var calen = document.getElementById('calen')
 var Hora = document.getElementById('Hora')
 var Mostrar_name = document.getElementById('Mostrar_Nome')
 var nomedigitado = document.getElementById('nome')
+var Dia = document.getElementById('dia')
 
 var msg = document.getElementById('msg')
 
 var agora = new Date()
-var DiaSem = agora.getDay()
+var DiaSem = 
+
+
+var MostrarDia = agora.getDate()
 
 var HoraAtual = agora.getHours()
 var MinAtual = agora.getMinutes()
+
+console.log(DiaSem)
 
 function NomeUser(){
 
@@ -18,7 +24,11 @@ function NomeUser(){
   if( HoraAtual >= 18) {
     msg.innerHTML = 'Boa Noite'
 
+ 
+
     Mostrar_name.innerHTML = `Bem vindo ${nomedigitado.value} ` 
+
+
 }
 
 switch(DiaSem){
