@@ -2,6 +2,7 @@ var calen = document.getElementById('calen')
 var Hora = document.getElementById('Hora')
 var Mostrar_name = document.getElementById('Mostrar_Nome')
 var nomedigitado = document.getElementById('nome')
+var Mes = document.getElementById('mes')
 var Dia = document.getElementById('dia')
 
 var msg = document.getElementById('msg')
@@ -13,7 +14,7 @@ var Meses = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho",
 var agora = new Date()
 var DiaSem = Meses[agora.getMonth()]
 
-
+var Dia = agora.getDate()
 
 var MostrarDia = agora.getDate()
 
@@ -29,7 +30,7 @@ function NomeUser(){
   if( HoraAtual >= 18) {
     msg.innerHTML = 'Boa Noite'
 
-    Dia.innerHTML = `Estamos em, ${DiaSem}`
+    Mes.innerHTML = `Estamos em, ${DiaSem}, dia ${Dia}`
     Mostrar_name.innerHTML = `Bem vindo ${nomedigitado.value} ` 
 
 }
