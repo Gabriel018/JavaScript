@@ -40,8 +40,6 @@ function NomeUser(){
   }
 
 
-
-
 switch(DiaSem){
 
     case 0:
