@@ -6,9 +6,10 @@ let valor = document.querySelector('#valor')
 
 btns.forEach( function(btn){
     btn.addEventListener("click", function(e){
-      const botoes = e.currentTarget.classlist
+      const botoes = e.currentTarget.classList
       if(botoes.contains("subtrair")){
-        alert('opa')
+        contador--
+        
       }
       valor.textContent = contador
     })
