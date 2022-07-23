@@ -9,7 +9,13 @@ btns.forEach( function(btn){
       const botoes = e.currentTarget.classList
       if(botoes.contains("subtrair")){
         contador--
+      }
+      if (botoes.contains("aumentar")){
+        contador++
+      }  
         
+      if (botoes.contains("zerar")){
+        contador = 0
       }
       valor.textContent = contador
     })
