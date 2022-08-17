@@ -29,28 +29,35 @@ const  Menu = [
 },
 
 
-
-
 ]
 
 const sectionCenter = document.querySelector(".section-center")
 
 window.addEventListener("DOMContentLoaded", function(){
-    let DisplayMenu = Menu.map(function(item){
-       console.log(item)
-
-return `<div class="menu-item">
-<img src=${item.img} class="photo">
-<div class="item-info">
- <header>
-     <h4>${item.categoria}</h3>
-     <h4 class=${item.preco}>R$16</h3>
- </header>
- <p class="item-text">${item.Descricao}</p>
-</div>`;
-
-    })
-   console.log(DisplayMenu)
-   DisplayMenu = DisplayMenu.join("")
-   sectionCenter.innerHTML = DisplayMenu
+    DisplayMenuItems(Menu);
 });
+    
+function DisplayMenuItems(MenuItens){
+    let DisplayMenu = Menu.map(function(item){
+        console.log(item)
+
+
+        return `<div class="menu-item">
+        <img src=${item.img} class="photo">
+        <div class="item-info">
+        <header>
+            <h4>${item.categoria}</h3>
+            <h4 class=${item.preco}>R$16</h3>
+        </header>
+        <p class="item-text">${item.Descricao}</p>
+        </div>`;
+
+    });
+console.log(DisplayMenu)
+DisplayMenu = DisplayMenu.join("")
+sectionCenter.innerHTML = DisplayMenu    
+
+
+    
+
+};
