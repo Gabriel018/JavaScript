@@ -7,7 +7,7 @@ const  Menu = [
     categoria:"biscoito",
     preco: 16.99,
     img:"./img/cookie.jpg",
-    Descricao:"Kra e so um cookie",
+    Descricao:"Kra e so um cookie"
 },
 
 {
@@ -16,7 +16,7 @@ const  Menu = [
     categoria:"bolo",
     preco: 36.99,
     img:"./img/bolo.jpg",
-    Descricao:"somente um bolo",
+    Descricao:"somente um bolo"
 },
 
 {
@@ -25,7 +25,7 @@ const  Menu = [
     categoria:"bolo",
     preco: 36.99,
     img:"./img/torta.jpg",
-    Descricao:"somente uma torta",
+    Descricao:"somente uma torta"
 },
 
 
@@ -51,5 +51,6 @@ return `<div class="menu-item">
 
     })
    console.log(DisplayMenu)
+   DisplayMenu = DisplayMenu.join("")
    sectionCenter.innerHTML = DisplayMenu
 });
