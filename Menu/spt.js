@@ -32,10 +32,29 @@ const  Menu = [
 ]
 
 const sectionCenter = document.querySelector(".section-center")
+const filterBtn = document.querySelectorAll(".filter-btn")
 
+
+//Load Items
 window.addEventListener("DOMContentLoaded", function(){
     DisplayMenuItems(Menu);
 });
+//Filter item
+filterBtn.forEach(function(btn){
+ btn.addEventListener("click",function(e){
+    const categoria = e.currentTarget.dataset.id
+    const MenuCategory  = Menu.filter(function(MenuItens){
+        if(MenuItens.categoria === categoria)
+           return MenuItens    
+    })
+    if(categoria === "Tudo"){
+        DisplayMenuItems(Menu)
+    }
+    else
+    DisplayMenuItems(MenuCategory)
+ })
+
+})
     
 function DisplayMenuItems(MenuItens){
     let DisplayMenu = Menu.map(function(item){
