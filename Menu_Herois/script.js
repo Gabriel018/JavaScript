@@ -22,13 +22,22 @@ const Herois = [{
 }
 ]
 
-const Heroi_Section = document.querySelectorAll(".Heroi-Container")
-const Btn = document.querySelectorAll(".btn")
+const Heroi_Section = document.querySelector(".Heroi-Container")
+const Btn = document.querySelector(".btn")
 
 window.addEventListener("DOMContentLoaded", function(){
     let DisplayMenu = Herois.map(function(item){
-    console.log(item)
-return item;
+     
+    return `<div class="Heroi-Container">
+    <div class="Heroi">
+        <img src=${item.img} alt="">
+        <p>Nome: ${item.nome}</h2>
+        <P>Classe:${item.classe}</P>
+        <p>idade:23</p>
+    </div>`
+
+
     })
+    Heroi_Section.innerHTML = DisplayMenu
 })
 
