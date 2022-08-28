@@ -29,5 +29,16 @@ p{ font-size: 18px}
 }
 
 .Heroi{
- display: inline;
+ font-size: 30px;  
+
+}
+
+.Heroi-Container {
+    width: 90vw;
+    display: flex;
+    margin: 0 auto;
+    max-width: 1170px;
+    display: grid;
+    gap: 3rem 2rem;
+    flex-direction: row;
 }
