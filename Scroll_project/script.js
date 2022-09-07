@@ -1,18 +1,10 @@
+//close links
 
-const nav = document.getElementById("navbar")
+const NavTogglete = document.querySelector('.nav-toggle')
+const linkContainer = document.querySelector(".links-container")
+const links = document.querySelector('.links')
 
-window.addEventListener("scroll", function(){
-    const scrollHeight = window.pageYOffset
-    const navHeight = nav.getBoundingClientRect().height
 
-if(scrollHeight > navHeight){
-    nav.classList.add("fixed-nav")
-}
-
-else{
-    nav.classList.remove("fixed-nav")
-}
-     
-
+NavTogglete.addEventListener("click", function(){
+ linkContainer.classList.toggle("show-links")   
 })
-
