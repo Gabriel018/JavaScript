@@ -1,0 +1,13 @@
+body {
+    background-color: brown;
+}
+
+.body-muda {
+    background-color: blue;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
