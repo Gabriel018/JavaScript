@@ -1,21 +1,22 @@
+
 .titulo { text-align: center;
           font-size: 32px;}
 
 .grid{
     justify-content: center;
     display: grid;
+    flex-direction: column;
     width: 100%;
-    min-height: 100px;
+    min-height: 200px;
     padding: 30px;
-    gap: 20px;
-    grid-template-columns: repeat(4,200px);
+    grid-template-columns:  200px;
 }
 
 .card{
     width: 100px;
     height: 100px;
     background-color: gray;
-    border: 6px;
+    border: 1px solid black;
     border-radius: 9px;
     text-align: center;
 }
