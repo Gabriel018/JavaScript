@@ -5,11 +5,10 @@
 .grid{
     justify-content: center;
     display: grid;
-    flex-direction: column;
     width: 100%;
     min-height: 200px;
     padding: 30px;
-    grid-template-columns:  200px;
+    grid-template-columns: 200px 200px 200px 200px;
 }
 
 .card{

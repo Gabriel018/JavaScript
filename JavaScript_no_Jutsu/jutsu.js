@@ -35,12 +35,13 @@ function DisplayMenuItems(MenuItens){
   let  DisplayMenu = MenuItens.map(function(item){
         console.log(item)
     
-    return `<div class="grid">
+    return `<div class="card">
     <img src="${item.img}">
      </div>`
 
     })
     console.log(DisplayMenu)
+    DisplayMenu = DisplayMenu.join("")
     gridcard.innerHTML = DisplayMenu
     
 }
