@@ -1,6 +1,7 @@
 
 
 .titulo { text-align: center;
+          color: blue;
           font-size: 32px;}
 
 .grid{
@@ -27,6 +28,8 @@
 }
 
 
-.jutsu{
-    visibility: hidden;
+.modal{
+    display:none;
+    text-align: center;
+    
 }
