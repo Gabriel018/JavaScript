@@ -6,13 +6,21 @@ const juju = document.querySelector(".jutsu")
 const modal = document.getElementById("mymodal")
 
 const clicados = []
+
+const fire = ['Dog','Galo']
+
+
+
+
 console.log(clicados)
 function mostrar(clicked){
-   var audio = new Audio('img/itachi_Jutsu.mp3')
    
+   var audio = new Audio('img/itachi_Jutsu.mp3')
    console.log(clicked)
+ 
    clicados.push(clicked) 
-   if(clicados.indexOf('Dog','Galo')){
+   if(JSON.stringify(clicados)==JSON.stringify(fire)){
+    alert("Opa!!!")  
     audio.play()  
     modal.style.display="block"
    }
@@ -20,4 +28,5 @@ function mostrar(clicked){
    
     }
 
- 
+    
+   
