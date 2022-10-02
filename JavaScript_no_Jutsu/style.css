@@ -25,6 +25,7 @@
 .card:hover{
     
     border: 9px solid rgb(175, 173, 173);
+    cursor: pointer;
 }
 
 
