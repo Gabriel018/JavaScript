@@ -1,0 +1,34 @@
+
+.container{
+    border: solid 5px black;
+    position: fixed;
+    width: 400px;
+    height: 400px;
+}
+
+.chat-header{
+    font-size: 20px;
+color: aliceblue;    
+height: 50px;
+background-color: blue;
+}
+
+
+.chat-body{
+    height: 300px;
+}
+
+
+.chat-input{
+    height: 50px;
+    display: flex;
+    align-items:flex-start;
+}
+
+
+#txt{
+    line-height: 20px;
+    padding: 4px 5px;
+    outline: none;
+    caret-color: black;
+}
